@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form align="center">
+    <h1 align="center">VOTER LOGIN</h1>
+    <div class="content">
+      <div class="input-field">
+        <input id="voter" type="text" placeholder="Voter ID" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input id="email" type="email" placeholder="Email" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input id="pass" type="password" placeholder="Password" autocomplete="new-password">
+      </div>
+    </div>
+    <div>
+<!--      <button >Sign in</button>-->
+<!--        <button>Register</button>-->
+      <input type="button" onclick="javascript:validate()"  value="LOGIN" class="action" />
+<!--      <input type="button" onclick="location.href='https://google.com';" value="Go to Google" class="action"/>-->
+    </div>
+    <br>
+    <div class="link1">
+    <a href="https://eci.gov.in/voter/voter-registration/" target="_blank">NOT REGISTERED? REGISTER HERE!</a>
+    </div>
+    <br>
+  </form>
+  <div>
+    <img src="img.png" width="500" height="350" alt="VOTE IMG  ">
+  </div>
+</div>
+<!-- partial -->
+  <script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("voter").value == "123456"
+       && document.getElementById("email").value == "vudhanthineeraja@gmail.com"
+       && document.getElementById("pass").value == "1236")
+    {
+        alert( "validation succeeded" );
+        location.href="http://localhost:8501/";
+    }
+    else
+    {
+        alert( "validation failed" );
+        location.href="num2.html";
+    }
+}
+</script>
+
+</body>
+</html>
